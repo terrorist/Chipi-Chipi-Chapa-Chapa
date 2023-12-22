@@ -23,7 +23,7 @@ def run_vlc(file_path, vlc_exe_path):
     # Check if the MP4 file exists on the USB
     if os.path.exists(mp4_file_path):
         # Run VLC with the specified file using the VLC executable from the USB
-        subprocess.run([vlc_exe_path, mp4_file_path])
+        subprocess.run([vlc_exe_path, mp4_file_path, '--fullscreen', '--loop'])
     else:
         print(f"No MP4 file found on the USB.")
 
